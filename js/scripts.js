@@ -14,13 +14,27 @@ var cardCreator = function(start, end) {
 $(function() {
   $("body").append("<div class=\"container\"></div>")
   $(".container").append("<h1 class=\"jumbotron\">Look at the page source!</h1>");
-  $(".container").append("<button type=\"button\" class=\"btn\" >");
+  $(".container").append("<button class=\"btn\" id=\"light\">Light Theme</button><button class=\"btn\" id=\"dark\">Dark Theme</button><button class=\"btn\" id=\"rotator\">Rotate</button>");
+  $("body").addClass("light");
 
   cardCreator();
 
   $(".container").append("<div class=\"results\"></div>");
   $(".results").append("<ul></ul>");
+
   cardDecks.forEach(function(card) {
     $("ul").append("<li>"+card+"</li>");
+  });
+
+  $("button#light").click(function() {
+    $("body").removeClass();
+    $("body").addClass("light");
+  });
+  $("button#dark").click(function() {
+    $("body").removeClass();
+    $("body").addClass("dark");
+  });
+  $("button#rotator").click(function() {
+    $("body").toggleClass("rotator");
   });
 });

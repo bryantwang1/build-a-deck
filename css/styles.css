@@ -2,3 +2,27 @@
   border-bottom: 1px solid black;
   width: 30vw;
 }
+
+.btn {
+  margin: 10px;
+}
+
+.light {
+  background-color: lightgray;
+}
+
+.dark {
+  background-color: black;
+}
+
+.dark ul {
+  color: white;
+}
+
+.dark .separator {
+  border-bottom: 1px solid white;
+}
+
+.rotator {
+  transform: rotate(15deg);
+}
